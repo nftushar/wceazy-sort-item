@@ -125,17 +125,9 @@ $unique_id = rand();
             $widgetsOrder = get_option('wceazy_product_filter_settings', json_encode(['stock_filter_sequence_test' => ['rating', 'search', 'category', 'stock', 'price']]));
             $widgetsOrder = json_decode($widgetsOrder, true);
 
-            // echo "<pre>";
-            // print_r($widgetsOrder);
-            // echo "</pre>";
-
 
             foreach ($widgetsOrder['stock_filter_sequence_test'] as $widget) {
-
-                echo "<pre>";
-                print_r($widget);
-                echo "</pre>";
-
+ 
                 switch ($widget) {
                     case 'search':
                         if ($wceazy_pf_show_search_filter == "yes") { ?>
@@ -233,10 +225,6 @@ $unique_id = rand();
             <!-- Add your product container content here -->
         </div>
     </div>
-
-
-
-
 
     <script type="text/javascript">
         jQuery(document).ready(function() {

@@ -776,15 +776,9 @@ $wceazy_pf_stock_filter_checkbox_checked_bg = isset($wceazy_pf_settings["stock_f
 
                         <div class="tab_body_form" id="sequence-customizer">
                             <div id="sortable-wrapper" class="product_filter_sortable">
-                                <?php
-                                // Fetch the sequence order data from the database
+                                <?php 
                                 $widgetsOrder = get_option('wceazy_product_filter_settings', json_encode(['stock_filter_sequence_test' => ['rating', 'search', 'category', 'stock', 'price']]));
-                                $widgetsOrder = json_decode($widgetsOrder, true);
-                                // $widgetsOrder = get_option('wceazy_pf_widgets_order', ['rating', 'search', 'category', 'stock', 'price']);
-                                // echo "<pre>";
-                                // print_r($widgetsOrder);
-                                // echo "</pre>";
-
+                                $widgetsOrder = json_decode($widgetsOrder, true); 
                                 $widgetList = [
                                     'rating'   => $wceazy_pf_rating_filter_label_text,
                                     'search'   => $wceazy_pf_search_filter_label_text,
@@ -792,15 +786,8 @@ $wceazy_pf_stock_filter_checkbox_checked_bg = isset($wceazy_pf_settings["stock_f
                                     'stock'    => $wceazy_pf_stock_filter_label_text,
                                     'price'    => $wceazy_pf_price_filter_label_text
                                 ];
-
-                                // print_r($widgetsOrder['stock_filter_sequence_test']);
-                                foreach ($widgetsOrder['stock_filter_sequence_test'] as $widget) {
-
-
-                                    echo "<pre>";
-                                    print_r($widget);
-                                    echo "</pre>";
-
+ 
+                                foreach ($widgetsOrder['stock_filter_sequence_test'] as $widget) { 
 
                                     $label = $widgetList[$widget];
 

@@ -38,7 +38,7 @@ function wceazy_product_filter_save() {
 
     const filterItems = document.querySelectorAll('.product_filter_sortable .wceazy_product_filter_field_group');
 
-    console.log(filterItems, jQuery('.product_filter_sortable .wceazy_product_filter_field_group'));
+    // console.log(filterItems, jQuery('.product_filter_sortable .wceazy_product_filter_field_group'));
 
     const items = [];
 
@@ -46,7 +46,7 @@ function wceazy_product_filter_save() {
         items.push(item.dataset.widget);
     });
 
-    console.log({ items })
+    // console.log({ items })
 
 
 

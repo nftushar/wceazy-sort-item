@@ -200,27 +200,20 @@ if (!class_exists('WcEazyAdmin')) {
                     wp_enqueue_script( 'wceazy-admin-module-address-book', WCEAZY_JS_DIR.'address_book/admin_main.js', array('jquery'), WCEAZY_VERSION );
                 }
                 /* ======== Product Filter ========== */
-                // if($this->settings->getModuleStatus("product_filter")){
-                //     wp_enqueue_script('custom-wceazy-script', WCEAZY_JS_DIR . 'custom-script.js', array('jquery'), '1.0', true);
+                // if($this->settings->getModuleStatus("product_filter")){ 
                 //     wp_enqueue_style('wceazy-admin-module-product-filter', WCEAZY_CSS_DIR.'product_filter/admin_main.css', array(), WCEAZY_VERSION);
                 //     wp_enqueue_script( 'wceazy-admin-module-product-filter', WCEAZY_JS_DIR.'product_filter/admin_main.js', array('jquery'), WCEAZY_VERSION ); 
 
                 // } 
                 if ($this->settings->getModuleStatus("product_filter")) {
                     // Enqueue your custom script
-                    wp_enqueue_script('custom-wceazy-script', WCEAZY_JS_DIR . 'custom-script.js', array('jquery'), '1.0', true);
-
-                    // Enqueue styles
+                    wp_enqueue_script('custom-wceazy-script', WCEAZY_JS_DIR . 'custom-script.js', array('jquery'), '1.0', true); 
+                    wp_enqueue_script( 'wceazy-admin-module-address-book', WCEAZY_JS_DIR.'product_filter/custom_ui.js', array('jquery'), WCEAZY_VERSION );
                     wp_enqueue_style('wceazy-admin-module-product-filter', WCEAZY_CSS_DIR . 'product_filter/admin_main.css', array(), WCEAZY_VERSION);
-
-                    // Enqueue jQuery UI styles
-                    wp_enqueue_style('jquery-ui-style', 'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', array(), '1.12.1');
-
-                    // Enqueue jQuery and jQuery UI scripts
+ 
+                    wp_enqueue_style('jquery-ui-style', 'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css', array(), '1.12.1'); 
                     wp_enqueue_script('jquery');
-                    wp_enqueue_script('jquery-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', array('jquery'), '1.12.1', true);
-
-                    // Enqueue your main admin script
+                    wp_enqueue_script('jquery-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', array('jquery'), '1.12.1', true); 
                     wp_enqueue_script('wceazy-admin-module-product-filter', WCEAZY_JS_DIR . 'product_filter/admin_main.js', array('jquery', 'jquery-ui'), WCEAZY_VERSION);
                 }
  

@@ -50,41 +50,8 @@ function appsero_init_tracker_wceazy()
     $client->insights()->init();
 }
 
-appsero_init_tracker_wceazy();
-
-
-// Enqueue scripts and styles
-// add_action('admin_enqueue_scripts', 'wceazy_enqueue_scripts');
-
-
-
-// NF Tushar enqueue
-// function wceazy_enqueue_scripts($hook)
-// {
-//     if (strpos($hook, 'wceazy-dashboard')) {
-//         wp_enqueue_script('custom-wceazy-script', WCEAZY_JS_DIR . 'custom-script.js', array('jquery'), '1.0', true);
-
-//         // wp_localize_script('custom-wceazy-script', 'plugin_script_object', array(
-//         //     'plugin_script_ajax_url' => admin_url('admin-ajax.php'),
-//         //     'nonce'   => wp_create_nonce('plugin_nonce'),
-//         // ));
-//     }
-
-
-//     wp_enqueue_style('custom-wceazy-style', WCEAZY_CSS_DIR . 'custom-style.css');
-// }
-
-
-
-
-
-
-
-
-
-
-
-
+appsero_init_tracker_wceazy(); 
+ 
 
 function wceazy_check_premium_activation()
 {

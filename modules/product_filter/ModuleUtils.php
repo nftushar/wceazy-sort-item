@@ -8,10 +8,7 @@ if (!defined ('WPINC')) {
 add_action('wp_footer', function(){
     $settings = get_option('wceazy_product_filter_settings');
     $settings = json_decode($settings, true);
-
-    echo "<pre>";
-    print_r($settings);
-    echo "</pre>";
+ 
 });
 if(!isset($_SESSION)){session_start();}
 
